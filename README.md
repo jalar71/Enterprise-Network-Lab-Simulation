@@ -1,7 +1,7 @@
 # Enterprise-Network-Lab-Simulation
 ***Skip to how-it-works.md to read how the whole setup works.***
 
-This simulation project was inspired by a few questions I had and decided to find the answers by setting up my own lab environment:
+This simulation project was inspired by a few questions I had 🤔 and decided to find the answers by setting up my own lab environment:
 - How do Linux systems integrate with Active Directory?
 - How do enterprise environments route and control client traffic?
 - How can software be batch-installed across multiple Windows clients?
@@ -32,7 +32,7 @@ While I was working on this lab there a few errors I ran into and I am documenti
 - 🖥️ Both Windows and Ubuntu clients successfully joined to the domain
 - 🌐 Internet access is working on all machines
 - 🧠 Windows Server DNS forwards external queries to 8.8.8.8(To resolve DNS requests not solvable by the Windows Server)
-## 🐞 What Didn’t Work (Troubleshooting Highlights)
+## ❌ What Didn’t Work (Troubleshooting Highlights)
 
 See [`what-went-wrong.md`](./what-went-wrong.md) for more details, but here are a few key issues I ran into:
 
