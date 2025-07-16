@@ -31,7 +31,7 @@ All machines are running on **VMware Workstation** using a **custom host-only ne
 4. **Ubuntu Client** is also domain-joined.
    - Integrated into Active Directory using `sssd` and `realm`.
    - Also receives IP from pfSense and uses Windows Server for DNS.
-5. ### 📦 Batch Software Installation via Active Directory (GPO)
+5.  Batch Software Installation via Active Directory (GPO)
 
 To simulate real-world enterprise management, I configured **Group Policy Objects (GPOs)** on the Windows Server to perform **batch software installation** on Windows domain-joined clients.
 
@@ -77,15 +77,4 @@ Upon reboot, domain-joined Windows clients automatically installed the specified
 - **DNS hierarchy** with local resolution + external forwarding
 - **Routing and firewall use** using pfSense
 - **Cross-platform domain integration** with both Windows and Linux clients
-
----
-
-##  Summary
-
-This lab simulates how a real enterprise network operates:
-
-- Centralized user authentication and policy management
-- Controlled internet access via a firewall/gateway
-- DNS and DHCP services managed internally
-- Linux and Windows machines working under one domain
-- Full traffic flow routed and controlled
+- **Batch Installation** of software packages on Windows clients.
