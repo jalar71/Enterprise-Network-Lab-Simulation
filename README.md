@@ -20,7 +20,7 @@ Everything was built using VMware Workstation on a custom virtual network (`10.1
 | Ubuntu Client   | 10.109.25.111    | Domain-joined Linux client       |
 
 All machines are on the same subnet and receive their IPs through static DHCP reservations via MAC address mapping in pfSense.
-!(screenshots/Network-Diagram.png)
+![Lab Topology](screenshots/Network-Diagram.png)
 
 ---
 While I was working on this lab there a few errors I ran into and I am documenting that as well for anyone and myself to help troubleshooting in the future.
