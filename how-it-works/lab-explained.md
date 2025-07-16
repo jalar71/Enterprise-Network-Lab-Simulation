@@ -31,6 +31,31 @@ All machines are running on **VMware Workstation** using a **custom host-only ne
 4. **Ubuntu Client** is also domain-joined.
    - Integrated into Active Directory using `sssd` and `realm`.
    - Also receives IP from pfSense and uses Windows Server for DNS.
+5. ### 📦 Batch Software Installation via Active Directory (GPO)
+
+To simulate real-world enterprise management, I configured **Group Policy Objects (GPOs)** on the Windows Server to perform **batch software installation** on Windows domain-joined clients.
+
+####  Objective:
+Automate software deployment to client machines during startup or user login, using centralized domain control.
+
+#### 🛠️ Tools Used:
+- Windows Server 2022 (Domain Controller)
+- `.msi` installer packages (e.g., Wireshark, VLC)
+- Group Policy Management Console (GPMC)
+- Shared network folder (`\\rjlab.local\software`)
+
+####  Steps:
+1. **Created a shared folder** on the Windows Server with read access for `Authenticated Users`.
+2. **Placed `.msi` installers** (e.g., `Wireshark.msi`) into this shared folder.
+3. In GPMC:
+   - Created a new GPO linked to the target OU (Organizational Unit).
+   - Navigated to:  
+     `Computer Configuration → Policies → Software Settings → Software Installation`
+   - Added a new package using the UNC path (e.g., `\\rjlab.local\software\7zip.msi`).
+4. **Rebooted the client machine** to trigger the installation.
+
+#### ✅ Result:
+Upon reboot, domain-joined Windows clients automatically installed the specified software without user interaction, demonstrating centralized control similar to enterprise environments.
 
 ---
 
