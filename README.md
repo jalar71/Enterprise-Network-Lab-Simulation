@@ -1,5 +1,5 @@
 # Enterprise-Network-Lab-Simulation
-***Skip to how-it-works.md to read how the whole setup works.***
+***Skip to [`how-it-works.md`](/how-it-works/lab-explained.md) to read how the whole setup works.***
 
 This simulation project was inspired by a few questions I had 🤔 and decided to find the answers by setting up my own lab environment:
 - How do Linux systems integrate with Active Directory?
