@@ -17,6 +17,13 @@ All machines are running on **VMware Workstation** using a **custom host-only ne
    - It provides IP addresses to all VMs using static DHCP mappings.
    - It routes all LAN traffic to the WAN and enables internet access for clients.
    - Firewall rules can be created to allow, block, or log traffic.
+![pfSense DHCP Config](https://raw.githubusercontent.com/jalar71/Enterprise-Network-Lab-Simulation/main/screenshots/pf_sense_dhcp_config.png)
+![pfSense CLI Interface](https://raw.githubusercontent.com/jalar71/Enterprise-Network-Lab-Simulation/main/screenshots/pf_sense_cli_interface.png)
+
+![pfSense DHCP Static Mapping](https://raw.githubusercontent.com/jalar71/Enterprise-Network-Lab-Simulation/main/screenshots/pf_sense_dhcp_static_mapping.png)
+
+![pfSense Firewall Rules](https://raw.githubusercontent.com/jalar71/Enterprise-Network-Lab-Simulation/main/screenshots/pf_sense_firewall_rules.png)
+
 
 2. **Windows Server 2019** functions as the **Active Directory Domain Controller** and **DNS server**.
    - Domain: `rjlab.local`
