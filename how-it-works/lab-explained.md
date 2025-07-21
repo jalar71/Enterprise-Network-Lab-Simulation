@@ -29,15 +29,30 @@ All machines are running on **VMware Workstation** using a **custom host-only ne
    - Domain: `rjlab.local`
    - Authenticates users, manages group policies, and controls DNS.
    - Configured to forward external DNS queries to `8.8.8.8` Google DNS resolver.
+![Windows Server DNS Forwarding](https://github.com/jalar71/Enterprise-Network-Lab-Simulation/blob/main/screenshots/Win-Server-DNS-Forwarding.png?raw=true)
+
 
 3. **Windows 11 Client** is joined to the domain.
    - Authenticates via the domain controller.
    - Resolves DNS through the Windows Server.
    - Receives IP from pfSense (static mapping).
 
+![Windows 11 AD Join Step 1](https://github.com/jalar71/Enterprise-Network-Lab-Simulation/blob/main/screenshots/win-11-AD-joing%20(1).png?raw=true)
+
+![Windows 11 AD Join Step 2](https://github.com/jalar71/Enterprise-Network-Lab-Simulation/blob/main/screenshots/win-11-AD-joing%20(2).png?raw=true)
+
+![Windows 11 AD Join Step 3](https://github.com/jalar71/Enterprise-Network-Lab-Simulation/blob/main/screenshots/win-11-AD-joing%20(3).png?raw=true)
+
+
 4. **Ubuntu Client** is also domain-joined.
    - Integrated into Active Directory using `sssd` and `realm`.
    - Also receives IP from pfSense and uses Windows Server for DNS.
+![Ubuntu AD CLI Command](https://github.com/jalar71/Enterprise-Network-Lab-Simulation/blob/main/screenshots/ubuntu-AD-cli-command.png?raw=true)
+
+![Ubuntu AD Joining Success](https://github.com/jalar71/Enterprise-Network-Lab-Simulation/blob/main/screenshots/ubuntu-AD-joining-success.png?raw=true)
+
+![AD Windows & Linux Client Overview](https://github.com/jalar71/Enterprise-Network-Lab-Simulation/blob/main/screenshots/AD_win_linux_client.png?raw=true)
+
 5.  Batch Software Installation via Active Directory (GPO)
 
 To simulate real-world enterprise management, I configured **Group Policy Objects (GPOs)** on the Windows Server to perform **batch software installation** on Windows domain-joined clients.
@@ -63,6 +78,12 @@ Automate software deployment to client machines during startup or user login, us
 
 #### ✅ Result:
 Upon reboot, domain-joined Windows clients automatically installed the specified software without user interaction, demonstrating centralized control similar to enterprise environments.
+
+![VLC and Wireshark GPO Deployment](https://github.com/jalar71/Enterprise-Network-Lab-Simulation/blob/main/screenshots/vlc-wireshark-install-gpo.png?raw=true)
+
+![VLC and Wireshark Installation Success](https://github.com/jalar71/Enterprise-Network-Lab-Simulation/blob/main/screenshots/wireshark-vlc-success.png?raw=true)
+
+![Software Installation Directory on Client](https://github.com/jalar71/Enterprise-Network-Lab-Simulation/blob/main/screenshots/folder-software-install-directory.png?raw=true)
 
 ---
 
